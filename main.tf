@@ -30,7 +30,8 @@ resource "oci_core_instance" "testhost" {
   availability_domain = data.oci_identity_availability_domain.test_compartment.name
   compartment_id      = "ocid1.compartment.oc1..aaaaaaaarbl7au6ufulhtfzrvjhejsbichrhujef4lva7pppweazkvun3bua"
   #shape               = "VM.Standard.A1.Flex"
-  shape               = "VM.Standard2.1"
+  #shape               = "VM.Standard2.1"
+  shape               = "VM.Standard.E2.1.Micro"
   shape_config {
     memory_in_gbs = 1
     ocpus         = 1
