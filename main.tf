@@ -1,4 +1,4 @@
-variable "private_key" { 
+variable "private_key" {
 }
 
 variable "tenancy_ocid" {
@@ -34,13 +34,7 @@ provider "oci" {
   disable_auto_retries = false
 }
 
-variable "ad_region_mapping" {
-  type = map(string)
 
-  default = {
-    us-ashburn-1 = 3
-  }
-}
 
 /*
 variable "ad_region_mapping" {
@@ -51,7 +45,7 @@ variable "ad_region_mapping" {
     us-ashburn-1 = 3
     us-seattle-1 = 2
   }
-}  
+}
 
 variable "images" {
   type = map(string)
@@ -67,7 +61,8 @@ variable "images" {
   }
 }
 */
-  
+
+/*
 variable "images" {
   type = map(string)
 
@@ -77,10 +72,11 @@ variable "images" {
     us-ashburn-1   = "ocid1.image.oc1.iad.aaaaaaaayuihpsm2nfkxztdkottbjtfjqhgod7hfuirt2rqlewxrmdlgg75q"
   }
 }
+*/
 
 data "oci_identity_availability_domain" "ad" {
   compartment_id = var.tenancy_ocid
-  ad_number      = var.ad_region_mapping[var.region]
+  ad_number      = 2
 }
 
 resource "oci_core_virtual_network" "test_vcn" {
@@ -185,7 +181,7 @@ resource "oci_core_instance" "free_instance0" {
 
   source_details {
     source_type = "image"
-    source_id   = var.images[var.region]
+    source_id   = "ocid1.image.oc1.iad.aaaaaaaayuihpsm2nfkxztdkottbjtfjqhgod7hfuirt2rqlewxrmdlgg75q"
   }
 
   metadata = {
