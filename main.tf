@@ -1,6 +1,9 @@
 variable "private_key" {
 }
 
+variable "ssh_public_key" {
+}
+
 variable "tenancy_ocid" {
   default = "ocid1.tenancy.oc1..aaaaaaaauuao4pnrffvzgxylvbobagcyo35qsu6z4bqdvjcla4czevhriqvq"
 }
@@ -11,10 +14,6 @@ variable "user_ocid" {
 
 variable "fingerprint" {
   default = "4d:27:1c:92:29:78:bc:0e:a7:45:ba:5b:f0:50:98:25"
-}
-
-variable "ssh_public_key" {
-  default = "ssh-key-2022-02-03.key.pub"
 }
 
 variable "compartment_ocid" {
@@ -185,7 +184,7 @@ resource "oci_core_instance" "free_instance0" {
   }
 
   metadata = {
-    ssh_authorized_keys = file(var.ssh_public_key)
+    ssh_authorized_keys = var.ssh_public_key
   }
 }
 
