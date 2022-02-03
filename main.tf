@@ -13,10 +13,11 @@ variable "fingerprint" {
   default = "4d:27:1c:92:29:78:bc:0e:a7:45:ba:5b:f0:50:98:25"
 }
 
-variable "private_key_path" {
+variable "private_key" {
 }
 
 variable "ssh_public_key" {
+  default = "id_rsa.pub"
 }
 
 variable "compartment_ocid" {
@@ -32,7 +33,7 @@ provider "oci" {
   tenancy_ocid     = var.tenancy_ocid
   user_ocid        = var.user_ocid
   fingerprint      = var.fingerprint
-  private_key_path = var.private_key_path
+  private_key_path = var.private_key
 }
 
 variable "ad_region_mapping" {
