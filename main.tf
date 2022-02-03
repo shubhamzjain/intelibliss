@@ -1,5 +1,5 @@
-// Copyright (c) 2017, 2021, Oracle and/or its affiliates. All rights reserved.
-// Licensed under the Mozilla Public License v2.0
+variable "private_key" { 
+}
 
 variable "tenancy_ocid" {
   default = "ocid1.tenancy.oc1..aaaaaaaauuao4pnrffvzgxylvbobagcyo35qsu6z4bqdvjcla4czevhriqvq"
@@ -11,9 +11,6 @@ variable "user_ocid" {
 
 variable "fingerprint" {
   default = "4d:27:1c:92:29:78:bc:0e:a7:45:ba:5b:f0:50:98:25"
-}
-
-variable "private_key" {
 }
 
 variable "ssh_public_key" {
