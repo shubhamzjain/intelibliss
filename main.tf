@@ -204,7 +204,7 @@ resource "oci_core_instance" "free_instance1" {
 
   source_details {
     source_type = "image"
-    source_id   = var.images[var.region]
+    source_id   = "ocid1.image.oc1.iad.aaaaaaaayuihpsm2nfkxztdkottbjtfjqhgod7hfuirt2rqlewxrmdlgg75q"
   }
 
   metadata = {
