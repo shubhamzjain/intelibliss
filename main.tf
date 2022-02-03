@@ -17,7 +17,7 @@ variable "private_key" {
 }
 
 variable "ssh_public_key" {
-  default = "id_rsa.pub"
+  default = "ssh-key-2022-02-02.key.pub"
 }
 
 variable "compartment_ocid" {
