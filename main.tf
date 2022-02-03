@@ -13,17 +13,13 @@ provider "oci" {
   disable_auto_retries = false
 }
 
-variable "compartment_ocid" {
-    default = "ocid1.compartment.oc1..aaaaaaaay4dtstotrclgh6s2kxdyjsroffbkahpqvw7wahbcdygakkuyo7ta"
-}
-
 variable "ad_number" {
   default = 2
 }
 
 data "oci_identity_availability_domain" "test_compartment" {
     #Required
-    compartment_id = var.tenancy_ocid
+    compartment_id = "ocid1.tenancy.oc1..aaaaaaaauuao4pnrffvzgxylvbobagcyo35qsu6z4bqdvjcla4czevhriqvq"
     ad_number = var.ad_number
 }
 
@@ -32,7 +28,7 @@ resource "oci_core_instance" "testhost" {
   # Required
   count = var.count_of_instances
   availability_domain = data.oci_identity_availability_domain.test_compartment.name
-  compartment_id      = "ocid1.compartment.oc1..aaaaaaaay4dtstotrclgh6s2kxdyjsroffbkahpqvw7wahbcdygakkuyo7ta"
+  compartment_id      = "ocid1.compartment.oc1..aaaaaaaarbl7au6ufulhtfzrvjhejsbichrhujef4lva7pppweazkvun3bua"
   #shape               = "VM.Standard.A1.Flex"
   shape               = "VM.Standard2.1"
   shape_config {
