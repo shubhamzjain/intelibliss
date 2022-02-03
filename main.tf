@@ -189,6 +189,7 @@ resource "oci_core_instance" "free_instance0" {
   }
 }
 
+/*
 resource "oci_core_instance" "free_instance1" {
   availability_domain = data.oci_identity_availability_domain.ad.name
   compartment_id      = var.compartment_ocid
@@ -211,7 +212,7 @@ resource "oci_core_instance" "free_instance1" {
     ssh_authorized_keys = var.ssh_public_key
   }
 }
-
+*/
 resource "oci_load_balancer" "free_load_balancer" {
   #Required
   compartment_id = var.compartment_ocid
@@ -248,7 +249,7 @@ resource "oci_load_balancer_backend" "free_load_balancer_test_backend0" {
   load_balancer_id = oci_load_balancer.free_load_balancer.id
   port             = "80"
 }
-
+/*
 resource "oci_load_balancer_backend" "free_load_balancer_test_backend1" {
   #Required
   backendset_name  = oci_load_balancer_backend_set.free_load_balancer_backend_set.name
@@ -256,7 +257,7 @@ resource "oci_load_balancer_backend" "free_load_balancer_test_backend1" {
   load_balancer_id = oci_load_balancer.free_load_balancer.id
   port             = "80"
 }
-
+*/
 resource "oci_load_balancer_hostname" "test_hostname1" {
   #Required
   hostname         = "app.free.com"
