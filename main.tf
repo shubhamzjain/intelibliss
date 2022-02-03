@@ -5,9 +5,9 @@ variable "private_key" {
 
 
 provider "oci" {
-  tenancy_ocid         = "ocid1.tenancy.oc1..aaaaaaaa5cbcqzirzahps7dseqjdxxwq4easb3qd2wrxriybgnmqwdtqwmdq"
-  user_ocid            = "ocid1.user.oc1..aaaaaaaakbhdeyr7cyzd3wq2n3xygackylkybbjognndly55agg6eu2jhkwa"
-  fingerprint          = "30:db:60:dd:4f:7a:35:8c:58:4c:e5:74:12:e6:ba:bb"
+  tenancy_ocid         = "ocid1.tenancy.oc1..aaaaaaaauuao4pnrffvzgxylvbobagcyo35qsu6z4bqdvjcla4czevhriqvq"
+  user_ocid            = "ocid1.user.oc1..aaaaaaaawimuaayeafktaqctwt4twmobbka5awtsepkd4rvss4mtvykxg3pa"
+  fingerprint          = "4d:27:1c:92:29:78:bc:0e:a7:45:ba:5b:f0:50:98:25"
   private_key          = var.private_key
   region               = "us-ashburn-1"
   disable_auto_retries = false
@@ -19,7 +19,7 @@ provider "oci" {
 resource "oci_core_instance" "testhost" {
   # Required
   count = var.count_of_instances
-  availability_domain = "fgZK:US-ASHBURN-AD-2"
+  availability_domain = "ubQd:US-ASHBURN-AD-2"
   compartment_id      = "ocid1.compartment.oc1..aaaaaaaay4dtstotrclgh6s2kxdyjsroffbkahpqvw7wahbcdygakkuyo7ta"
   #shape               = "VM.Standard.A1.Flex"
   shape               = "VM.Standard2.1"
@@ -36,7 +36,7 @@ resource "oci_core_instance" "testhost" {
   display_name = "testhost${count.index}"
   create_vnic_details {
     assign_public_ip = true
-    subnet_id        = "ocid1.subnet.oc1.iad.aaaaaaaamqyqptsx6v7zomgdrgoznkezbjplshoo6ceyhaqccdag3oewnlaq"
+    subnet_id        = "ocid1.subnet.oc1.iad.aaaaaaaa74trcuememyseily3jm5ltzbf7kr4nuv5z3rfaxfiivpln3jeefa"
   }
  # metadata = {
   #ssh_authorized_keys = file(var.ssh_public_key)
