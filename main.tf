@@ -14,7 +14,7 @@ variable "fingerprint" {
 }
 
 variable "ssh_public_key" {
-  default = "ssh-key-2022-02-02.key.pub"
+  default = "ssh-key-2022-02-03.key.pub"
 }
 
 variable "compartment_ocid" {
