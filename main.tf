@@ -29,7 +29,7 @@ resource "oci_core_instance" "testhost" {
   count = var.count_of_instances
   availability_domain = data.oci_identity_availability_domain.test_compartment.name
   compartment_id      = "ocid1.compartment.oc1..aaaaaaaarbl7au6ufulhtfzrvjhejsbichrhujef4lva7pppweazkvun3bua"
-  display_name        = "ShubhamServiceNowTestInstance"
+  display_name        = "ShubhamServiceNowTestInstance${count.index"
   #shape               = "VM.Standard.A1.Flex"
   #shape               = "VM.Standard2.1"
   shape               = "VM.Standard.E2.1.Micro"
@@ -47,7 +47,6 @@ resource "oci_core_instance" "testhost" {
     source_type = "image"
   }
   # Optional
-  display_name = "testhost${count.index}"
   create_vnic_details {
     assign_public_ip = true
     subnet_id        = "ocid1.subnet.oc1.iad.aaaaaaaa74trcuememyseily3jm5ltzbf7kr4nuv5z3rfaxfiivpln3jeefa"
