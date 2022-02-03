@@ -213,6 +213,9 @@ resource "oci_core_instance" "free_instance1" {
   }
 }
 */
+
+/*
+
 resource "oci_load_balancer" "free_load_balancer" {
   #Required
   compartment_id = var.compartment_ocid
@@ -249,6 +252,7 @@ resource "oci_load_balancer_backend" "free_load_balancer_test_backend0" {
   load_balancer_id = oci_load_balancer.free_load_balancer.id
   port             = "80"
 }
+*/
 /*
 resource "oci_load_balancer_backend" "free_load_balancer_test_backend1" {
   #Required
@@ -257,7 +261,11 @@ resource "oci_load_balancer_backend" "free_load_balancer_test_backend1" {
   load_balancer_id = oci_load_balancer.free_load_balancer.id
   port             = "80"
 }
+
+
 */
+
+/*
 resource "oci_load_balancer_hostname" "test_hostname1" {
   #Required
   hostname         = "app.free.com"
@@ -324,6 +332,9 @@ resource "oci_load_balancer_listener" "load_balancer_listener1" {
 output "lb_public_ip" {
   value = [oci_load_balancer.free_load_balancer.ip_address_details]
 }
+
+
+*/
 
 data "oci_core_vnic_attachments" "app_vnics" {
   compartment_id      = var.compartment_ocid
