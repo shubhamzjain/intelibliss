@@ -29,15 +29,20 @@ resource "oci_core_instance" "testhost" {
   count = var.count_of_instances
   availability_domain = data.oci_identity_availability_domain.test_compartment.name
   compartment_id      = "ocid1.compartment.oc1..aaaaaaaarbl7au6ufulhtfzrvjhejsbichrhujef4lva7pppweazkvun3bua"
+  display_name        = "ShubhamServiceNowTestInstance"
   #shape               = "VM.Standard.A1.Flex"
   #shape               = "VM.Standard2.1"
   shape               = "VM.Standard.E2.1.Micro"
+  
   shape_config {
     memory_in_gbs = 1
     ocpus         = 1
   }
   source_details {
+    
     #source_id   = "ocid1.image.oc1.iad.aaaaaaaagubx53kzend5acdvvayliuna2fs623ytlwalehfte7z2zdq7f6ya"
+    
+    #Oracle-Linux-8.5-2021.12.08-0
     source_id = "ocid1.image.oc1.iad.aaaaaaaa24ckjg36yh22ksnu7wuzozne6wnh5go4dsbycod244oguv42t6lq"
     source_type = "image"
   }
