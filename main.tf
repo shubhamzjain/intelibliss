@@ -26,6 +26,7 @@ variable "compartment_ocid" {
 
 variable "region" {
   #default = "us-ashburn-1"
+  default = "us-phoenix-1"
 }
 
 provider "oci" {
