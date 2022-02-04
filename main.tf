@@ -380,6 +380,8 @@ data "oci_database_autonomous_databases" "test_autonomous_databases" {
   is_free_tier = "true"
 }
 
+/*
+
 resource "oci_database_autonomous_database" "test_autonomous_database" {
   #Required
   admin_password           = "Testalwaysfree1"
@@ -400,4 +402,4 @@ resource "oci_database_autonomous_database" "test_autonomous_database" {
   license_model           = "LICENSE_INCLUDED"
   is_free_tier            = "true"
 }
-
+*/
