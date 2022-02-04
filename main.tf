@@ -5,19 +5,23 @@ variable "ssh_public_key" {
 }
 
 variable "tenancy_ocid" {
-  default = "ocid1.tenancy.oc1..aaaaaaaauuao4pnrffvzgxylvbobagcyo35qsu6z4bqdvjcla4czevhriqvq"
+  #default = "ocid1.tenancy.oc1..aaaaaaaauuao4pnrffvzgxylvbobagcyo35qsu6z4bqdvjcla4czevhriqvq"
+  default = "ocid1.tenancy.oc1..aaaaaaaa4mzf57gl7afpkuhti3rq76gie762ciyfwuvu6xn4tcxndj7zhi3q"
 }
 
 variable "user_ocid" {
-  default = "ocid1.user.oc1..aaaaaaaawimuaayeafktaqctwt4twmobbka5awtsepkd4rvss4mtvykxg3pa"
+  #default = "ocid1.user.oc1..aaaaaaaawimuaayeafktaqctwt4twmobbka5awtsepkd4rvss4mtvykxg3pa"
+  default = "ocid1.user.oc1..aaaaaaaavmsv3e6kyk54lt3teywcmzdjvqu6px2dhwknbks7ffrfpgdhbarq"
 }
 
 variable "fingerprint" {
-  default = "4d:27:1c:92:29:78:bc:0e:a7:45:ba:5b:f0:50:98:25"
+  #default = "4d:27:1c:92:29:78:bc:0e:a7:45:ba:5b:f0:50:98:25"
+  default = "a5:7d:61:b5:fb:26:6a:7e:ba:be:7e:4d:b4:b7:66:1f"
 }
 
 variable "compartment_ocid" {
-  default = "ocid1.compartment.oc1..aaaaaaaarbl7au6ufulhtfzrvjhejsbichrhujef4lva7pppweazkvun3bua"
+  #default = "ocid1.compartment.oc1..aaaaaaaarbl7au6ufulhtfzrvjhejsbichrhujef4lva7pppweazkvun3bua"
+  default = "ocid1.compartment.oc1..aaaaaaaad4r5xrowh7vfojhsifwew473fwruqd5asuppfwzqytoyml6lizda"
 }
 
 variable "region" {
