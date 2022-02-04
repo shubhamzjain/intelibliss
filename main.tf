@@ -371,6 +371,10 @@ output "app" {
   value = "http://${data.oci_core_vnic.app_vnic.public_ip_address}"
 }
 
+output "app2" {
+  value = "http://${data.oci_core_vnic.app_vnic.public_ip_address}"
+}
+
 data "oci_database_autonomous_databases" "test_autonomous_databases" {
   #Required
   compartment_id = var.compartment_ocid
