@@ -137,7 +137,7 @@ resource "oci_core_security_list" "test_security_list" {
 resource "oci_core_instance" "free_instance0" {
   availability_domain = data.oci_identity_availability_domain.ad.name
   compartment_id      = var.compartment_ocid
-  display_name        = "freeInstance0"
+  display_name        = "freeInstance0-shubh"
   shape               = var.instance_shape
 
   shape_config {
@@ -149,7 +149,7 @@ resource "oci_core_instance" "free_instance0" {
     subnet_id        = oci_core_subnet.test_subnet.id
     display_name     = "primaryvnic"
     assign_public_ip = true
-    hostname_label   = "freeinstance0"
+    hostname_label   = "freeinstance0-shubh"
   }
 
   source_details {
@@ -165,7 +165,7 @@ resource "oci_core_instance" "free_instance0" {
 resource "oci_core_instance" "free_instance1" {
   availability_domain = data.oci_identity_availability_domain.ad.name
   compartment_id      = var.compartment_ocid
-  display_name        = "freeInstance1"
+  display_name        = "freeInstance1-shubh"
   shape               = var.instance_shape
 
   shape_config {
@@ -177,7 +177,7 @@ resource "oci_core_instance" "free_instance1" {
     subnet_id        = oci_core_subnet.test_subnet.id
     display_name     = "primaryvnic"
     assign_public_ip = true
-    hostname_label   = "freeinstance1"
+    hostname_label   = "freeinstance1-shubh"
   }
 
   source_details {
